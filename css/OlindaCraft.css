@@ -446,6 +446,11 @@ header .device-container .screen img {
 	text-align: left;
 }
 /* Fim da estilização do Sobre*/
+/* Tratamento das Imagens do Sobre*/
+.img-responsive{
+	background-size:100% 100%;
+}	
+/* Fim do tratamento*/
 section {
   padding: 100px 0;
 }
