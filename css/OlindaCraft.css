@@ -434,6 +434,18 @@ header .device-container .screen img {
 
 /*Fim media query - header*/
 
+/* Textos do Sobre */
+
+.text-muted{
+	text-align: left;
+}
+.PrimaryTitle{
+	text-align: left;
+}
+.subheading{
+	text-align: left;
+}
+/* Fim da estilização do Sobre*/
 section {
   padding: 100px 0;
 }
