@@ -437,7 +437,8 @@ header .device-container .screen img {
 /* Textos do Sobre */
 
 .text-muted{
-	text-align: left;
+	text-align: center;
+  	font-style: italic;
 }
 .PrimaryTitle{
 	text-align: left;
