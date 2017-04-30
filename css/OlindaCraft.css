@@ -132,6 +132,7 @@ p {
   }
   .navbar-default .navbar-header .navbar-brand {
     background-image: url('../img/logos/LogoOlindaCraft1.png');
+    transform: scale(1.2,1.2);
   }
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
@@ -361,12 +362,6 @@ header .device-container .screen img {
 }
 @media (min-width: 992px) {
 
-  #jogoCarousel {
-    padding-right:33.3333%;
-    }
-	#jogoCarousel .carousel-controls {
-    display:none;
-    }
   header .header-content .header-content-inner h1 {
     font-size: 50px;
   }
@@ -587,9 +582,9 @@ header#MineCraftCarousel div.text-header {
   color: #FFEB32;
 }
 #mapa {
-    /* The image used */
-    background-color: #0000ff;
-    /* Create the parallax scrolling effect */
+  /* The image used */
+    background: #0000FF url("../img/Sobre/PlanoFundo.png");
+  /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -616,19 +611,41 @@ section#mapa div.text-header {
     left:0;
 	  right:0;
 	  bottom:0;
-	  text-align:left;
+	  text-align:center;
 	  padding:10px;
 	  background:rgba(0,0,0,0.6);
 	  text-shadow:none;
 }
-section#jogo h2.section-heading, h3.section-subgame{
+.item .thumb {
+    width: 25%;
+	cursor: pointer;
+	float: left;
+}
+.item .thumb img {
+	width: 100%;
+	margin: 2px;
+}
+.item img {
+	width: 100%;
+}
+section#jogo h2.section-heading, .subheading-game, h3.section-subgame{
   color: #0000ff;
+  text-align: center;
 }
 section#jogo div.slideGame {
   padding:120px 0;
 }
+section#jogo p.text-game {
+  color: #0000ff;
+}
 #about {
-  background-color: #0000ff;
+  /* The image used */
+    background: #0000FF url("../img/Sobre/PlanoFundo.png");
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 section#about h2.section-heading, .subheading {
   color: #ffff00;
@@ -641,6 +658,9 @@ section#about p.text-muted {
 section#about img.img-circle{
   height: 100%;
   width: 100%;
+}
+#Video {
+ padding-top: 30px;
 }
 section#roteiro {
   background-color: #008000;
@@ -717,7 +737,7 @@ aside.partners img {
   margin: 50px auto;
 }
 .partners {
-  background-color: white;
+  background-color: #FFFFF0;
   background-repeat: no-repeat;
 }
 aside.partners h1 {
@@ -727,12 +747,12 @@ footer ul > li > a:hover, a:focus {
   color: #0000ff;
 }
 footer {
-  padding: 25px 0;
+  padding: 5px 0;
   text-align: center;
   background-image: url('../img/fundo/MineCraftFundo.png');
 }
 footer span.copyright {
-  line-height: 40px;
+  line-height: 5px;
   font-family: "Minecraft Regular", 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;
   text-transform: none;
@@ -806,96 +826,6 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
-#thumbnail-slider .carousel-caption {
-    left:0;
-	right:0;
-	bottom:0;
-	text-align:center;
-	padding:5px;
-	background:rgba(0,0,0,0.6);
-	text-shadow:none;
-}
-#thumbnail-slider {
-    margin:0 auto;
-    width:100%;
-    max-width:900px;
-    padding:0;
-    box-sizing:border-box;
-    position:relative;
-    -webkit-user-select: none;
-    user-select:none;
-}
-#thumbnail-slider div.inner {
-    position:relative;
-    overflow:hidden;
-    padding:0;
-    margin:0;
-}
-#thumbnail-slider div.inner ul {
-    white-space:nowrap;
-    position:relative;
-    left:0; top:0;
-    list-style:none;
-    font-size:0;
-    padding:0;
-    margin:0;
-    float:left!important;
-    width:auto!important;
-    height:auto!important;
-}
-#thumbnail-slider ul li {
-    display:inline-block;
-    margin-top:20px;
-    margin-bottom:90px;
-    margin-left:-30px; margin-right:-30px;
-    -webkit-transform:scale(0.9);
-    transform:scale(0.9);
-    -webkit-transition:-webkit-transform 0.5s;
-    transition:transform 0.5s;
-    box-sizing:content-box;
-    text-align:center;
-    vertical-align:middle;
-    padding:0;
-    position:relative;
-    list-style:none;
-    backface-visibility:hidden;
-}
-#thumbnail-slider ul li.active {
-    -webkit-transform:scale(1.15);
-    transform:scale(1.15);
-    background-color:transparent;
-}
-#thumbnail-slider .thumb {
-    width:100%;
-    height: 100%;
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center center;
-    display:block;
-    position:absolute;
-    font-size:0;
-    cursor:inherit;
-    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.4)));
-    transition:all linear 0.4s;
-}
-#thumbnail-slider .thumb {
-        -webkit-transform: perspective(500px) translateX(1px) translateZ(-30px) rotateY(30deg);
-        transform: perspective(500px) translateX(1px) translateZ(-30px) rotateY(30deg);
-}
-#thumbnail-slider .active .thumb {
-        -webkit-transform: translateX(0px) translateZ(0px) rotateY(0deg);
-        transform: translateX(0px) translateZ(0px) rotateY(0deg);
-}
-#thumbnail-slider li.active ~ li .thumb {
-        -webkit-transform: perspective(500px) translateX(-1px) translateZ(-30px) rotateY(-30deg);
-        transform: perspective(500px) translateX(-1px) translateZ(-30px) rotateY(-30deg);
-  }
-#thumbnail-slider-pause-play {
-  display:none;
-}
-#thumbnail-slider-prev, #thumbnail-slider-next {
-  display:none;
-}
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -944,7 +874,7 @@ body {
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #8B4513	;
+        border-top-color: brown;
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
           animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
